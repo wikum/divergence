@@ -4,12 +4,10 @@ author: Wikum Dinalankara, Luigi Marchionni, Qian Ke
 header-includes:
    - \usepackage{tabularx, longtable, graphicx, csquotes, hyperref, color, url}
 output:
-  pdf_document:
-    toc: true
-    number_sections: true
+    BiocStyle::html_document
 vignette: >
   %\VignetteIndexEntry{Performing Divergence Analysis}
-  %\VignetteEngine{knitr}
+  %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 bibliography: divergence.bib
 ---
@@ -46,8 +44,7 @@ We can prepare the baseline and data matrices, though this is strictly not neces
 
 Note that we use the SummarizedExperiment container for matrix data, where the original data, quantile transformed data and divergence coding can be maintained together. 
 
-```{r, echo=TRUE}
-
+```{r, echo=TRUE, message=FALSE}
 # load divergence package
 library(divergence)
 
